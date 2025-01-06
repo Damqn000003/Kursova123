@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Научете за застрашените животински видове в България и как можем да ги защитим">
+  <meta name="keywords" content="застрашени видове, животни, природа, България">
+  <meta name="author" content="Дамян Йонов">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Начало | Застрашените животински видове на България</title>
+  
+  <!-- Връзка към Font Awesome за иконки -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* Общ стил за цялата страница */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Хедър и навигация */
+    header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 300px;
+}
+
+header .logo img {
+  height: 50px; /* Височина на логото, можеш да я промениш според нуждите */
+  width: auto;  /* Автоматично изчисляване на ширината */
+  margin-right: 10px !important;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px !important;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+    {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1em 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Основно съдържание */
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    main h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #4CAF50;
+    }
+
+    main p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    main img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    main h2 {
+      font-size: 2em;
+      color: #333;
+      margin-top: 30px;
+    }
+
+    main ul {
+      text-align: left;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    main ul li {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+
+    /* Footer стил */
+    footer {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    footer .nav-links {
+      text-align: left;
+      flex: 1 1 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    footer .nav-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    footer .nav-links ul li {
+      margin: 5px 8px;
+      font-size: 0.8em; /* По-малък шрифт */
+      flex: 1 1 calc(33% - 10px); /* Елементи на по три в редица */
+      text-align: center;
+    }
+
+    footer .nav-links ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer .nav-links ul li a:hover {
+      text-decoration: underline;
+    }
+
+    footer .social-links {
+      margin: 20px 0;
+    }
+
+    footer .social-links a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.5em;
+    }
+
+    footer .social-links a:hover {
+      color: #ddd;
+    }
+
+    footer .credits {
+      flex: 1 1 100%;
+      font-size: 0.9em;
+      margin-top: 20px;
+    }
+  .slideshow {
+  text-align: center;
+  margin: 40px 0;
+  }
+
+  .slideshow h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #4CAF50;
+  }
+
+  .slideshow-container {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  gap: 10px;
+  }
+
+  .slide {
+  min-width: 50%; /* Показваме две снимки едновременно */
+  transition: transform 0.5s ease-in-out;
+  }
+
+  .slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  }  
+  .partners {
+  padding: 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.partners h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.partners ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.partners ul li {
+  font-size: 1.2em;
+  color: #4CAF50;
+  margin: 10px 0;
+}
+a.active {
+  color: #f1c40f; /* Златист цвят за активния линк */
+  font-weight: bold; /* Подчертано удебелен шрифт */
+  text-decoration: underline; /* Подчертаване на активния линк */
+}
+/* Навигация - забрана за клик върху активен линк */
+nav ul li a.active {
+  color: #f1c40f; /* Златист за активния линк */
+  font-weight: bold;
+  text-decoration: underline;
+  pointer-events: none; /* Забранява кликането върху активния линк */
+}
+
+/* Общи стилове */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo-container img {
+  max-width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 50%;
+  text-align: justify;
+}
+
+.contact-info h3 {
+  font-size: 1.5em;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 1.1em;
+}
+
+.map-container {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.map-container iframe {
+  max-width: 100%;
+  height: 400px;
+  border: none;
+}
+.contact-info {
+  border: 2px solid #4CAF50; /* Зелената рамка */
+  padding: 15px; /* Вътрешен отстъп */
+  margin-top: 20px; /* Разстояние от абзаца */
+  border-radius: 10px; /* Заоблени ъгли */
+  background-color: #f9f9f9; /* Светъл фон за по-добра четимост */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Леко сенчест ефект */
+}
+#endangered-species {
+  text-align: center;
+  padding: 20px;
+}
+
+.species-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.species-item {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.species-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.species-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+.species-item:hover img {
+  transform: scale(0.8) translate(20px, -20px);
+}
+
+.species-item:hover .species-info {
+  transform: translate(-50%, -50%) scale(1);
+}
+#news {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Светъл фон за секцията */
+  border-radius: 10px; /* Заоблени ъгли */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Леко сенчест ефект */
+}
+
+#news h2 {
+  font-size: 2em;
+  color: #4CAF50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.news-list li a {
+  color: #4CAF50;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.news-list li a:hover {
+  color: #2e7d32; /* Потъмняване на зеленото при ховър */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Леко засенчване на текста */
+}
+#gallery {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+}
+
+#gallery h2 {
+  font-size: 2.5em;
+  color: #4CAF50;
+  margin-bottom: 30px;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.carousel-item p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#contact {
+    background-color: #f0f8ff;
+    padding: 40px 0;
+}
+
+#contact h2 {
+    text-align: center;
+    color: #2d6a4f;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    width: 50%;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    color: #2d6a4f;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contact-form button {
+    background: #2d6a4f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #218c74;
+}
+
+/* Отзивчив дизайн */
+@media (max-width: 768px) {
+    .contact-form {
+        width: 90%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+}
+  </style>
+</head>
+<body>
+  <!-- Хедър и навигация -->
+  <header>
+    <div class="logo">
+    <img src="bear.png" alt="Лого" />
+  </div>
+    <nav>
+    <ul>
+      <li><a href="#home" class="active" id="home-link">Начало</a></li>
+      <li><a href="#about" id="about-link">За нас</a></li>
+      <li><a href="#species" id="species-link">Застрашени видове</a></li>
+      <li><a href="#news" id="news-link">Новини</a></li>
+      <li><a href="#gallery" id="gallery-link">Галерия</a></li>
+      <li><a href="#contact" id="contact-link">Контакти</a></li>
+    </ul>
+  </nav>
+  </header>
+
+  <!-- Главно съдържание -->
+  <main>
+    <section id="home">
+  <h1>Спасете ги днес: Застрашените видове на България</h1>
+  <p>България е дом на невероятно биоразнообразие, но много от нашите животни са изправени пред сериозни заплахи. Тук ще научите за най-застрашените видове и как можем да помогнем за тяхната защита.</p>
+
+  <h2>Какво ще намерите на сайта?</h2>
+  <ul class="site-info">
+    <li><strong>Информация за застрашени видове:</strong> От птици до бозайници, открийте интересни факти за тях.</li>
+    <li><strong>Новини:</strong> Следете актуалните събития и кампании за опазване на природата.</li>
+    <li><strong>Галерия:</strong> Разгледайте снимки на редки животни в тяхната естествена среда.</li>
+    <li><strong>Контакти:</strong> Научете как да се свържете с нас или да станете доброволец.</li>
+  </ul>
+
+  <h2>Застрашени видове</h2>
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="images/species1.jpg" alt="Застрашен вид 1">
+    </div>
+    <div class="slide">
+      <img src="images/species2.jpg" alt="Застрашен вид 2">
+    </div>
+    <div class="slide">
+      <img src="images/species3.jpg" alt="Застрашен вид 3">
+    </div>
+    <div class="slide">
+      <img src="17-zlatkata.jpg" alt="Застрашен вид 4">
+    </div>
+    <div class="slide">
+      <img src="0817670001690959495_2106296_1920x1080.jpg" alt="Застрашен вид 5">
+    </div>
+    <div class="slide">
+      <img src="3osoqd.jpeg" alt="Застрашен вид 6">
+    </div>
+    <div class="slide">
+      <img src="20-diwa-kotka.jpg" alt="Застрашен вид 7">
+    </div>
+    <div class="slide">
+      <img src="9cheren-kylvach.jpg" alt="Застрашен вид 8">
+    </div>
+  </div>
+
+  <h2>Нашите партньори</h2>
+  <ul>
+    <li><a href="https://www.biodiversity.bg" target="_blank">Българска фондация за дивата природа (Biodiversity Foundation)</a></li>
+    <li><a href="https://greenbalkans.org" target="_blank">Зелени Балкани (Green Balkans)</a></li>
+    <li><a href="https://www.wwf.bg" target="_blank">WWF България (WWF Bulgaria)</a></li>
+    <li><a href="https://www.savi.bg" target="_blank">Фондация за дива природа "Сави" (Wildlife Foundation "Savi")</a></li>
+    <li><a href="https://balkani.org/" target="_blank">Сдружение за дива природа БАЛКАНИ (Wildlife Conservation Society - Balkans)</a></li>
+  </ul>
+</section>
+<section id="about">
+  <div class="about-container">
+    <div class="logo-container">
+      <img src="bear.png" alt="Лого на фондация 'Дивите Животни'" />
+    </div>
+    <div class="about-text">
+      <p>Фондация "Защитници на дивата природа" е неправителствена организация, посветена на опазването на биоразнообразието и защитата на застрашените животински видове в България. Създадена с мисията да съхрани уникалното природно богатство на страната, фондацията работи активно за опазване на редки и застрашени животни, повишаване на екологичната осведоменост и възстановяване на естествените им местообитания.
+
+      Основните дейности на организацията включват:
+
+      Осигуряване на грижи за пострадали или застрашени диви животни и тяхното връщане в природата;
+      Реализиране на образователни кампании за насърчаване на устойчив начин на живот и защита на природата;
+      Провеждане на научни изследвания и мониторинг за оценка на състоянието на застрашените видове;
+      Сътрудничество с местни и международни организации за разработване и прилагане на природозащитни инициативи.
+      Седалището на фондацията се намира в гр. София, а нейната работа се подкрепя от екип от специалисти и доброволци, обединени от каузата за съхраняване на дивата природа за бъдещите поколения.</p>
+    </div>
+    <div class="contact-info">
+    <h3>Фондация "Дивите Животни"</h3>
+    <p>Адрес: гр. София 1784, ж.к. “Младост” 1, бл. 50, вх. 2, ап. 39</p>
+    <p>Имейл: <a href="mailto:info@wildlife.org">info@wildlife.org</a></p>
+    <p>Телефон: +359 2 123 4567</p>
+  </div>
+  </div>
+
+  <div class="map-container">
+    <h3>Как да ни намерите</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.192109221288!2d23.37228247560227!3d42.65728421627282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa86867c68d2ef%3A0x7a06e96d1878b31!2zTWxhZG9zdCAxTWxhZG9zdCwg0LYu0LouINCc0LvQsNC00L7RgdGCIDEgNTAsINCy0YUuIDIsINCw0L8uIDM5LCAxNzg0IFNvZmlh!5e0!3m2!1sen!2sbg!4v1736115458944!5m2!1sen!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+<section id="species">
+  <h2>Застрашени видове</h2>
+  <div class="species-container">
+    <div class="species-item">
+      <img src="images.jpg" alt="Рис">
+      <div class="species-info">Той е изключително рядък в България и е на границата на изчезване. Обитава предимно гористите райони на Стара планина, Пирин и Родопите..</div>
+    </div>
+    <div class="species-item">
+      <img src="images (1).jpg" alt="Кафява мечка">
+      <div class="species-info">Един от най-впечатляващите бозайници в България. Кафявите мечки обитават гористите райони на Родопите, Рила и Пирин.</div>
+    </div>
+    <div class="species-item">
+      <img src="images (2).jpg" alt="Черен лешояд">
+      <div class="species-info">Черният лешояд е най-едрият вид лешояд в Европа. В България е изчезнал като гнездящ вид, но са предприети усилия за повторното му заселване.</div>
+    </div>
+    <div class="species-item">
+      <img src="images (3).jpg" alt="Балканска пъстърва">
+      <div class="species-info">Ендемичен вид риба, която обитава планинските реки и потоци в България. Характерна е със своята красива окраска и изключителна адаптивност.</div>
+    </div>
+  </div>
+</section>
+<section id="news">
+  <h2>Новини</h2>
+  <ul class="news-list">
+    <li>
+      <a href="https://www.biodiversity.bg/bg/news-details-58.html" target="_blank">
+        Експедиция за наблюдение на балканския рис
+      </a>
+    </li>
+    <li>
+      <a href="https://greenbalkans.org/bg/novini" target="_blank">
+        Спасителна акция за черния лешояд
+      </a>
+    </li>
+    <li>
+      <a href="https://www.wwf.bg/?uNewsID=360596" target="_blank">
+        Кампания за защита на кафявите мечки в България
+      </a>
+    </li>
+    <li>
+      <a href="https://balkani.org/category/news/" target="_blank">
+        Възстановяване на местообитанията на Балканската пъстърва
+      </a>
+    </li>
+    <li>
+      <a href="https://savi.bg/news" target="_blank">
+        Нов проект за опазване на дивите птици в Родопите
+      </a>
+    </li>
+    <li>
+      <a href="https://www.biodiversity.bg/bg/news-details-62.html" target="_blank">
+        Успешно маркиране на защитени видове в Национален парк „Пирин“
+      </a>
+    </li>
+    <li>
+      <a href="https://greenbalkans.org/bg/NatureConservation_Bulgaria" target="_blank">
+        Нови местообитания за белошипата ветрушка в Сакар
+      </a>
+    </li>
+    <li>
+      <a href="https://www.wwf.bg/?uNewsID=360718" target="_blank">
+        WWF организира акция за почистване на река Дунав
+      </a>
+    </li>
+    <li>
+      <a href="https://balkani.org/novini/balkani-wolf-conservation/" target="_blank">
+        Стратегия за защита на вълците на Балканите
+      </a>
+    </li>
+    <li>
+      <a href="https://savi.bg/news/rhodope-birds" target="_blank">
+        Проучване на популациите на редки грабливи птици в Родопите
+      </a>
+    </li>
+  </ul>
+</section>
+<section id="gallery">
+  <h2>Галерия</h2>
+  <div class="carousel-container">
+    <button class="prev-btn">&#10094;</button>
+    <div class="carousel">
+      <div class="carousel-item">
+        <img src="12-01-11-78147_1.jpg" alt="Родопска сова">
+        <p>Родопска сова: Обитава дълбоките гори на Родопите.</p>
+        </div>
+        <div class="carousel-item">
+        <img src="Esetri.jpg" alt="Дунавска есетра">
+        <p>Дунавска есетра: Критично застрашен вид от река Дунав.</p>
+        </div>
+        <div class="carousel-item">
+        <img src="images.jpg" alt="Балкански рис">
+        <p>Балкански рис: Рядък хищник, живеещ в горите на Рила.</p>
+        </div>
+        <div class="carousel-item">
+        <img src="images (2).jpg" alt="Черен лешояд">
+        <p>Черен лешояд: Един от най-големите хищни птици в Европа.</p>
+      </div>
+    </div>
+    <button class="next-btn">&#10095;</button>
+  </div>
+</section>
+<section id="contact" class="contact-section">
+        <h2>Свържете се с нас:</h2>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Име:</label>
+                    <input type="text" id="name" placeholder="Вашето име">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Вашият email">
+                </div>
+                <div class="form-group">
+                    <label for="topic">Тема:</label>
+                    <input type="text" id="topic" placeholder="Относно">
+                </div>
+                <div class="form-group">
+                    <label for="message">Съобщение:</label>
+                    <textarea id="message" rows="5" placeholder="Напишете вашето съобщение"></textarea>
+                </div>
+                <button type="submit">Изпратете съобщението</button>
+            </form>
+        </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="nav-links">
+      <ul>
+    <li><a href="index.html">Начало</a></li>
+    <li><a href="about.html">За нас</a></li>
+    <li><a href="species.html">Застрашени видове</a></li>
+    <li><a href="news.html">Новини</a></li>
+    <li><a href="gallery.html">Галерия</a></li>
+    <li><a href="contact.html">Контакти</a></li>
+  </ul>
+    </div>
+
+    <div class="credits">
+      <p>© 2025 Застрашените животински видове на България</p>
+      <p>ИУ-Варна</p>
+      <p>Дамян Йонов</p>
+    </div>
+
+    <div class="social-links">
+      <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="contact.html" title="Контакти"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+  <script>
+    let currentIndex = 0;
+
+    function showSlides() {
+      const slides = document.querySelectorAll('.slide');
+      slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(-${currentIndex * 100}%)`;
+      });
+
+      currentIndex++;
+      if (currentIndex >= slides.length / 2) {
+        currentIndex = 0;
+      }
+    }
+
+    // Автоматична смяна на слайдовете на всеки 3 секунди
+    setInterval(showSlides, 3000);
+  </script>
+  <script>
+  // Получаваме текущия URL
+  var currentUrl = window.location.pathname;
+  
+  // Извличаме името на текущия файл (например index.html)
+  var currentPage = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
+
+  // Извличаме всички линкове
+  var links = document.querySelectorAll('.nav-links a');
+  
+  // Преглеждаме всички линкове и добавяме клас "active" към съответния линк
+  links.forEach(function(link) {
+    var linkPage = link.getAttribute('href').substring(link.getAttribute('href').lastIndexOf('/') + 1);
+    
+    if (linkPage === currentPage) {
+      link.classList.add('active');  // Добавяме клас "active"
+    } else {
+      link.classList.remove('active');  // Премахваме класа "active" от другите линкове
+    }
+  });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('section');
+  const links = document.querySelectorAll('nav ul li a');
+
+  // Функция за активиране на секцията
+  function activateSection(sectionId) {
+    // Премахваме активния клас от всички линкове
+    links.forEach(link => link.classList.remove('active'));
+
+    // Добавяме активен клас към съответния линк
+    const activeLink = document.querySelector(`a[href="#${sectionId}"]`);
+    if (activeLink) {
+      activeLink.classList.add('active');
+    }
+
+    // Показваме съответната секция и скриваме другите
+    sections.forEach(section => {
+      if (section.id === sectionId) {
+        section.style.display = 'block';
+      } else {
+        section.style.display = 'none';
+      }
+    });
+  }
+
+  // При зареждане на сайта първоначално показваме секция "home"
+  activateSection('home');
+
+  // Добавяме слушатели за линковете в навигацията
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // Забраняваме скок към #хаш
+      const sectionId = link.getAttribute('href').substring(1);
+      activateSection(sectionId);
+    });
+  });
+});
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+    const carousel = document.querySelector(".carousel");
+    const carouselItems = document.querySelectorAll(".carousel-item");
+    let currentIndex = 0;
+
+    // Показване на първото изображение
+    function updateCarousel() {
+      // Скриване на всички елементи
+      carouselItems.forEach(item => item.style.display = "none");
+      // Показване на текущия елемент
+      carouselItems[currentIndex].style.display = "block";
+    }
+
+    // Преминаване към предходното изображение
+    prevBtn.addEventListener("click", function() {
+      currentIndex = (currentIndex === 0) ? carouselItems.length - 1 : currentIndex - 1;
+      updateCarousel();
+    });
+
+    // Преминаване към следващото изображение
+    nextBtn.addEventListener("click", function() {
+      currentIndex = (currentIndex === carouselItems.length - 1) ? 0 : currentIndex + 1;
+      updateCarousel();
+    });
+
+    // Инициализиране на карусела
+    updateCarousel();
+  });
+</script>
+</body>
+</html>
